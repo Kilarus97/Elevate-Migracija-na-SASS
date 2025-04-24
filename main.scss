@@ -1,0 +1,89 @@
+@use 'variables' as *;
+@use 'primary-btn' as *;
+@use 'header' as *;
+/* General Styles */
+body {
+    font-family: $font-family_1;
+    color: $color_1;
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    font-size: $font-size-medium;
+}
+
+/* Main Section */
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $padding-extra-large $padding-small;
+
+    @include responsive($breakpoint-extra-small){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        width: 50%;
+        @include responsive($breakpoint-extra-small){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    h1 {
+        font-size: $font-size-large;
+        color: $color_2;
+    }
+
+    p {
+        font-size: $font-size-small;
+    }
+
+    img {
+        width: 40%;
+        @include responsive($breakpoint-extra-small){
+            width: 80%;
+        }
+    }
+}
+
+/* Features & Plans Sections */
+.features {
+    background: $background-light;
+}
+.center-section {
+    text-align: center;
+    padding: 50px 10px;
+}
+.card-list {
+    display: flex;
+    justify-content: space-between;
+    @include responsive($breakpoint-medium){
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+}
+.card {
+    background: $color_3;
+    padding: $padding-medium;
+    width: 27%;
+    border-radius: $border-radius-medium;
+    box-shadow: $box-shadow;
+    @include responsive($breakpoint-medium){
+        width: 80%;
+    }
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: $padding-medium;
+    background: $background-dark;
+    color: $color_3;
+}

@@ -1,0 +1,61 @@
+@use 'variables' as *;
+
+/* Main Section */
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $padding-extra-large $padding-small;
+
+    @include responsive($breakpoint-extra-small){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        width: 50%;
+        @include responsive($breakpoint-extra-small){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    h1 {
+        font-size: $font-size-large;
+        color: $color_2;
+    }
+
+    p {
+        font-size: $font-size-small;
+    }
+
+    img {
+        width: 40%;
+        @include responsive($breakpoint-extra-small){
+            width: 80%;
+        }
+    }
+}
+
+.card-list {
+    display: flex;
+    justify-content: space-between;
+    @include responsive($breakpoint-medium){
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+}
+.card {
+    background: $color_3;
+    padding: $padding-medium;
+    width: 27%;
+    border-radius: $border-radius-medium;
+    box-shadow: $box-shadow;
+    @include responsive($breakpoint-medium){
+        width: 80%;
+    }
+}

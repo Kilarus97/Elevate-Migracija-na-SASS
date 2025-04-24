@@ -1,0 +1,39 @@
+@use 'variables' as *;
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $padding-medium $padding-large;
+    box-shadow: $box-shadow;
+    margin-bottom: $padding-small;
+    .logo {
+        font-size: $font-size-medium;
+        font-weight: bold;
+        color: $color_2;
+    }
+
+    .nav-links {
+        list-style: none;
+        padding: 0;
+        @include responsive($breakpoint-extra-small){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        li {
+            display: inline-block;
+            margin: 0 $padding-small;
+        }
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            color: $color_1;
+            &:hover {
+                color: $color_2;
+            }
+        }
+    }
+}
