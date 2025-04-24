@@ -28,6 +28,13 @@ h2 {
   list-style: none;
   padding: 0;
 }
+@media (max-width: 576px) {
+  .navbar .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .navbar .nav-links li {
   display: inline-block;
   margin: 0 10px;
@@ -65,8 +72,23 @@ h2 {
   justify-content: space-between;
   padding: 50px 10px;
 }
+@media (max-width: 576px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .main .content {
   width: 50%;
+}
+@media (max-width: 576px) {
+  .main .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 .main h1 {
   font-size: 48px;
@@ -77,6 +99,11 @@ h2 {
 }
 .main img {
   width: 40%;
+}
+@media (max-width: 576px) {
+  .main img {
+    width: 80%;
+  }
 }
 
 /* Features & Plans Sections */
@@ -120,13 +147,6 @@ h2 {
   padding: 15px;
   background: #222;
   color: white;
-}
-
-/* Responsive */
-@media screen and (max-width: 992px) {
-  .card {
-    width: 80%;
-  }
 }
 
 /*# sourceMappingURL=elevate.css.map */

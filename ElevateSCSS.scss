@@ -58,6 +58,11 @@ h2 {
     .nav-links {
         list-style: none;
         padding: 0;
+        @include responsive($breakpoint-extra-small){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
         li {
             display: inline-block;
@@ -101,8 +106,20 @@ h2 {
     justify-content: space-between;
     padding: $padding-extra-large $padding-small;
 
+    @include responsive($breakpoint-extra-small){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .content {
         width: 50%;
+        @include responsive($breakpoint-extra-small){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
     }
 
     h1 {
@@ -116,6 +133,9 @@ h2 {
 
     img {
         width: 40%;
+        @include responsive($breakpoint-extra-small){
+            width: 80%;
+        }
     }
 }
 
@@ -153,14 +173,4 @@ h2 {
     padding: $padding-medium;
     background: $background-dark;
     color: $color_3;
-}
-
-/* Responsive */
-@media screen and (max-width: 992px) {
-    .card-list {
-        
-    }
-    .card {
-        width: 80%;
-    }
 }
