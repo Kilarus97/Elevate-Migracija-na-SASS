@@ -19,6 +19,17 @@ $border-radius-medium: 10px;
 
 $background-light: #f3f3f3;
 $background-dark: #222;
+
+$breakpoint-extra-small: 576px;
+$breakpoint-small: 768px;
+$breakpoint-medium: 992px;
+$breakpoint-large: 1200px;
+
+@mixin responsive($max-screen-size) {
+    @media (max-width: $max-screen-size) {
+        @content;
+    }
+}
 /* General Styles */
 body {
     font-family: $font-family_1;
@@ -119,6 +130,11 @@ h2 {
 .card-list {
     display: flex;
     justify-content: space-between;
+    @include responsive($breakpoint-medium){
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
 }
 .card {
     background: $color_3;
@@ -126,6 +142,9 @@ h2 {
     width: 27%;
     border-radius: $border-radius-medium;
     box-shadow: $box-shadow;
+    @include responsive($breakpoint-medium){
+        width: 80%;
+    }
 }
 
 /* Footer */
@@ -139,9 +158,7 @@ h2 {
 /* Responsive */
 @media screen and (max-width: 992px) {
     .card-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
+        
     }
     .card {
         width: 80%;
